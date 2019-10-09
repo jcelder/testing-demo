@@ -1,3 +1,3 @@
-import tasks from './tasks';
+import todos from './todos';
 
-export default { tasks };
+export default { todos };

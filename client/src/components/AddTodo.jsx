@@ -21,9 +21,9 @@ class AddTodo extends Component {
 
   onSubmitHandler(e) {
     e.preventDefault();
-    const { addTodo } = this.props;
+    const { createTodo } = this.props;
     const { todo } = this.state;
-    addTodo(todo);
+    createTodo(todo);
     this.reinitializeFormState();
   }
 

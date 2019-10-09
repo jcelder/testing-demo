@@ -12,7 +12,7 @@ const { Schema } = mongoose;
 
 const taskSchema = new Schema({
   task: String,
-  isComplete: Boolean,
+  isComplete: { type: Boolean, default: false },
   date: { type: Date, default: Date.now },
 });
 

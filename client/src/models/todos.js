@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const tasks = {
+const todos = {
   get: () => axios.get('/api/tasks').then(({ data }) => data),
   getOne: (id) => axios.get(`/api/tasks/${id}`).then(({ data }) => data),
   post: (task) => axios.post('/api/tasks', task).then(({ data }) => data),
@@ -8,4 +8,4 @@ const tasks = {
   delete: (id) => axios.delete(`/api/tasks/${id}`),
 };
 
-export default tasks;
+export default todos;
