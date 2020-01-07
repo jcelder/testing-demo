@@ -3,7 +3,9 @@ import moment from 'moment';
 
 const TodoListItem = ({ todo, updateTodo, deleteTodo }) => (
   <div className="collection-item">
-    {todo.task}
+    <span className="text">
+      {todo.task}
+    </span>
     <span className="secondary-content">
       {moment(todo.date).fromNow()}
       <span>
