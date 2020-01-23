@@ -18,11 +18,11 @@ describe('Unit Tests', () => {
     test('it should render a form', () => {
       const wrapper = shallow(<AddTodo createTodo={() => {}} />);
 
-      expect(wrapper.find('form')).toHaveLength(0);
+      expect(wrapper.find('form')).toHaveLength(1);
     });
   });
 
-  describe('Interaction Tests', () => {
+  describe('Unit Interaction Tests', () => {
     describe('onChangeHandler', () => {
       test('it should invoke the correct method when a change event is emitted', () => {
         const mockChangeHandler = jest.fn();
@@ -35,7 +35,7 @@ describe('Unit Tests', () => {
       test('it should correctly update the state when a change event is emitted', () => {
         const wrapper = shallow(<AddTodo createTodo={() => {}} />);
         wrapper.find('input').simulate('change', mockEventGenerator('a'));
-        expect(wrapper.instance().state.todo).toBe('b');
+        expect(wrapper.instance().state.todo).toBe('e');
       });
     });
     describe('onSubmitHandler', () => {

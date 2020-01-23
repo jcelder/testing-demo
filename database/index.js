@@ -11,7 +11,10 @@ mongoose.connect('mongodb://localhost:27017/todos')
 const { Schema } = mongoose;
 
 const taskSchema = new Schema({
-  task: String,
+  task: {
+    type: String,
+    required: true,
+  },
   isComplete: { type: Boolean, default: false },
   date: { type: Date, default: Date.now },
 });
